@@ -1,6 +1,5 @@
 node_modules/
 .DS_Store
 emojis.json
-deploy.js
 favicon.ico
 search.png
