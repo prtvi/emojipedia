@@ -1,13 +1,14 @@
 import React from 'react';
 import './EmojiCard.css';
 
-export default function EmojiCard() {
+export default function EmojiCard(props) {
+	const { emoji, description, category } = props;
+
 	return (
-		<div className="emoji-card">
-			<span className="emoji">😂</span>
-			<span className="desc">Face with tears of joy</span>
-			<span className="category">Smileys & Emoticon</span>
-			<span className="aliases">joy</span>
-		</div>
+		<li className="emoji-card">
+			<span className="emoji">{emoji}</span>
+			<span className="description">{description}</span>
+			<span className="category">{category}</span>
+		</li>
 	);
 }

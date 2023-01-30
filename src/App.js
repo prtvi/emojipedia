@@ -4,15 +4,21 @@ import './App.css';
 import SearchBar from './SearchBar/SearchBar';
 import EmojiCard from './EmojiCard/EmojiCard';
 
+import EMOJIS from './emojis.json';
+
+const getNrandomEmojis = function (n) {
+	if (n > 9 || n <= 0) n = 9;
+
+	const arr = [];
+	const len = EMOJIS.length;
+
+	for (let i = 0; i < n; i++) arr.push(EMOJIS[Math.floor(Math.random() * len)]);
+
+	return arr;
+};
+
 export default function App() {
-	// const [data, setData] = React.useState(null);
-	// React.useState(async () => {
-	// 	const res = await fetch('/api').catch(err => console.error(err));
-	// 	if (res.ok) {
-	// 		const data = await res.json().catch(err => console.error(err));
-	// setData('content from backend');
-	// 	}
-	// }, []);
+	const emojiArr = getNrandomEmojis(3);
 
 	return (
 		<div>
@@ -22,11 +28,16 @@ export default function App() {
 				<h1 className="h1">Em😃jipedia</h1>
 				<SearchBar />
 
-				<div className="emoji-card-list">
-					<EmojiCard />
-					<EmojiCard />
-					<EmojiCard />
-				</div>
+				<ul className="emoji-card-list">
+					{emojiArr.map((e, i) => (
+						<EmojiCard
+							key={i}
+							emoji={e.emoji}
+							description={e.description}
+							category={e.category}
+						/>
+					))}
+				</ul>
 			</div>
 		</div>
 	);

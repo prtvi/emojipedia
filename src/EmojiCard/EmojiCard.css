@@ -1,10 +1,15 @@
 .emoji-card {
 	width: 200px;
-	height: fit-content;
-	display: inline-block;
+	height: 130px;
+	max-height: 130px;
+	overflow: auto;
+	margin: 6px;
 	border-radius: 5px;
 	box-shadow: 5px 8px 15px #d2d2d2;
 	cursor: pointer;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
 }
 
 .emoji-card:hover {
@@ -13,19 +18,17 @@
 }
 
 .emoji-card span {
-	margin-bottom: 4px;
 	font-size: 14px;
 	display: block;
 	text-align: center;
 }
 
 span.emoji {
-	font-size: 34px;
-	margin-bottom: 0;
+	font-size: 35px;
 }
 
 span.category,
 span.aliases {
-	color: rgb(105, 106, 106);
+	color: #696a6a;
 	font-size: 12px;
 }
