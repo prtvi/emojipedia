@@ -1,0 +1,31 @@
+.emoji-card {
+	width: 200px;
+	height: fit-content;
+	display: inline-block;
+	border-radius: 5px;
+	box-shadow: 5px 8px 15px #d2d2d2;
+	cursor: pointer;
+}
+
+.emoji-card:hover {
+	transition: cubic-bezier(0.07, 1.41, 0.82, 1.41) 0.2s;
+	transform: scale(1.08);
+}
+
+.emoji-card span {
+	margin-bottom: 4px;
+	font-size: 14px;
+	display: block;
+	text-align: center;
+}
+
+span.emoji {
+	font-size: 34px;
+	margin-bottom: 0;
+}
+
+span.category,
+span.aliases {
+	color: rgb(105, 106, 106);
+	font-size: 12px;
+}
