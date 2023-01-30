@@ -1,0 +1,38 @@
+.input-container {
+	position: relative;
+	border: var(--t);
+}
+
+.input-search {
+	height: 40px;
+	border: 1px solid gainsboro;
+	border-radius: 5px;
+	display: block;
+	margin: 45px auto;
+	width: 80%;
+	font-size: 18px;
+	padding-left: 12px;
+	padding-right: 10px;
+}
+
+.input-search:focus {
+	outline: 1px solid yellowgreen;
+}
+
+.search-icon {
+	position: absolute;
+	width: 35px;
+	height: 35px;
+	top: 0;
+	bottom: 0;
+	left: 76%;
+	right: 0;
+	margin: auto;
+	opacity: 0.7;
+	border: var(--t);
+}
+
+.search-icon:hover {
+	opacity: 1;
+	cursor: pointer;
+}

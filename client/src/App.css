@@ -1,0 +1,35 @@
+:root {
+	/* --t: 1px solid black; */
+	--t2: 1px solid red;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Poppins', sans-serif;
+}
+
+.bg-top {
+	background-color: #6495ed;
+	height: 50vh;
+}
+
+.bg-bottom {
+	background-color: #ffffff;
+	height: 50vh;
+}
+
+.main {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	width: 75%;
+	height: 400px;
+	background-color: white;
+	border-radius: 10px;
+	box-shadow: 5px 10px 18px #888888;
+	z-index: 1;
+}
