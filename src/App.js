@@ -5,8 +5,14 @@ import './App.css';
 
 import SearchBar from './SearchBar/SearchBar';
 import EmojiCard from './EmojiCard/EmojiCard';
+import Pagination from './Pagination/Pagination';
 
 import EMOJIS from './emojis.json';
+
+// constants
+
+const resultsPerPage = 9;
+const resultLimit = 50;
 
 const fuse = new Fuse(EMOJIS, {
 	keys: ['description', 'aliases', 'tags'],
@@ -25,18 +31,31 @@ const getNrandomEmojis = function (n) {
 	return arr;
 };
 
+const sortDescending = (a, b) => {
+	if (a.score > b.score) return 1;
+	if (a.score < b.score) return -1;
+	return 0;
+};
+
 export default function App() {
 	const [search, setSearch] = React.useState('');
+	const [currPage, setCurrPage] = React.useState(1);
 
-	const foundEmoijis = fuse.search(search).sort((a, b) => {
-		if (a.score > b.score) return 1;
-		if (a.score < b.score) return -1;
-		return 0;
-	});
+	const foundEmojis = fuse
+		.search(search)
+		.sort(sortDescending)
+		.slice(0, resultLimit);
 
-	let emojiArr = [];
-	if (foundEmoijis.length === 0) emojiArr = getNrandomEmojis(6);
-	else emojiArr = foundEmoijis.slice(0, 9).map(e => e.item);
+	let list = getNrandomEmojis(resultsPerPage);
+	const resultLength = foundEmojis.length;
+
+	let enablePagination = false;
+	if (foundEmojis.length !== 0) {
+		enablePagination = true;
+		list = foundEmojis
+			.slice(resultsPerPage * (currPage - 1), resultsPerPage * currPage)
+			.map(e => e.item);
+	}
 
 	return (
 		<div>
@@ -47,7 +66,7 @@ export default function App() {
 				<SearchBar setSearch={setSearch} />
 
 				<ul className="emoji-card-list">
-					{emojiArr.map((e, i) => (
+					{list.map((e, i) => (
 						<EmojiCard
 							key={i}
 							emoji={e.emoji}
@@ -58,6 +77,16 @@ export default function App() {
 						/>
 					))}
 				</ul>
+
+				{enablePagination ? (
+					<Pagination
+						length={resultLength}
+						currPage={currPage}
+						setCurrPage={setCurrPage}
+					/>
+				) : (
+					<></>
+				)}
 			</div>
 		</div>
 	);

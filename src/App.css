@@ -28,7 +28,7 @@
 	margin: auto;
 	width: 75%;
 	height: fit-content;
-	max-height: 670px;
+	max-height: 750px;
 	background-color: white;
 	border-radius: 10px;
 	box-shadow: 5px 10px 18px #888888;
@@ -42,7 +42,7 @@
 
 .emoji-card-list {
 	margin: 20px;
-	margin-bottom: 40px;
+	margin-bottom: 30px;
 
 	/* responsive list, display-flex and flex-wrap */
 	display: flex;
