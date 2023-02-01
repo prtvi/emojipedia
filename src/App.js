@@ -6,15 +6,19 @@ import EmojiList from './EmojiList/EmojiList';
 import Pagination from './Pagination/Pagination';
 
 import {
-	resultsPerPage,
+	fuse,
 	getNrandomEmojis,
 	sortDescending,
-	fuse,
+	useWindowDimensions,
+	getResultsPerPage,
 } from './utils.js';
 
 export default function App() {
 	const [search, setSearch] = React.useState('');
 	const [currPage, setCurrPage] = React.useState(1);
+
+	const { width } = useWindowDimensions();
+	const resultsPerPage = getResultsPerPage(width);
 
 	const resultLimit = 50;
 	const foundEmojis = fuse
@@ -46,6 +50,7 @@ export default function App() {
 					length={resultLength}
 					currPage={currPage}
 					setCurrPage={setCurrPage}
+					resultsPerPage={resultsPerPage}
 				/>
 			</div>
 		</div>

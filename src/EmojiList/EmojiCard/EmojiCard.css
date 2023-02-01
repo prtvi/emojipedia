@@ -1,16 +1,18 @@
 .emoji-card {
-	width: 200px;
-	height: 130px;
-	max-height: 130px;
+	width: 90px;
+	height: 70px;
+	max-height: 90px;
 	overflow: auto;
-	margin: 6px;
+	margin: 5px;
 	border-radius: 5px;
-	box-shadow: 5px 8px 15px #d2d2d2;
+	box-shadow: 5px 5px 10px #d2d2d2;
 	cursor: pointer;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
 	position: relative;
+
+	border: var(--t);
 }
 
 .emoji-card:hover {
@@ -19,40 +21,66 @@
 }
 
 .emoji-card span {
-	font-size: 14px;
+	font-size: 10px;
 	display: block;
 	text-align: center;
+
+	border: var(--t);
 }
 
 span.emoji {
-	font-size: 35px;
+	font-size: 25px;
+	line-height: 25px;
 }
 
-span.category,
-span.aliases {
-	color: #696a6a;
-	font-size: 12px;
+span.category {
+	/* color: #696a6a; */
+	/* font-size: 8px; */
+	display: none;
 }
 
 /* copy icon */
 .emoji-card img {
-	width: 20px;
-	height: 20px;
+	width: 12px;
+	height: 12px;
 	margin: 4px;
 	opacity: 0.5;
 	position: absolute;
-	left: 83%;
-	bottom: 75%;
+	left: 80%;
+	bottom: 72%;
 	display: none;
 	transition: src 1s ease-in-out;
 }
 
-/* display image on emoji card hover */
+/* display image on card hover */
 .emoji-card:hover img {
 	display: block;
 }
 
 .emoji-card img:active {
+	opacity: 1;
 	transition: cubic-bezier(0.07, 1.41, 0.82, 1.41) 0.2s;
 	transform: scale(1.08);
+}
+
+@media screen and (min-width: 450px) {
+	.emoji-card {
+		width: 120px;
+	}
+
+	.emoji-card span {
+		font-size: 12px;
+	}
+
+	span.emoji {
+		font-size: 27px;
+		line-height: 27px;
+	}
+
+	.emoji-card img {
+		width: 15px;
+		height: 15px;
+		left: 81%;
+		bottom: 68%;
+	}
 }

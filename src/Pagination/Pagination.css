@@ -1,9 +1,19 @@
 .pagination-container {
+	height: 25px;
 	display: flex;
 	justify-content: center;
 	margin: 10px;
-	margin-top: 20px;
 	margin-bottom: 20px;
+
+	border: var(--t);
+}
+
+.pagination-container span {
+	font-size: 12px;
+	line-height: 25px;
+	width: 110px;
+	text-align: center;
+	vertical-align: middle;
 
 	border: var(--t);
 }
@@ -11,8 +21,8 @@
 .pagination-container img {
 	width: 15px;
 	height: 15px;
-	margin-left: 20px;
-	margin-right: 20px;
+	margin-left: 15px;
+	margin-right: 15px;
 	opacity: 0.6;
 	cursor: pointer;
 	vertical-align: middle;
@@ -24,9 +34,8 @@
 	opacity: 1;
 }
 
-.pagination-container span {
-	width: 140px;
-	text-align: center;
-
-	border: var(--t);
+@media screen and (min-width: 450px) {
+	.pagination-container span {
+		font-size: 14px;
+	}
 }

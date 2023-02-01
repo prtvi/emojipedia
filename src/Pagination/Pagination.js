@@ -1,10 +1,8 @@
 import React from 'react';
 import './Pagination.css';
 
-import { resultsPerPage } from '../utils.js';
-
 export default function Pagination(props) {
-	const { enable, length, currPage, setCurrPage } = props;
+	const { enable, length, currPage, setCurrPage, resultsPerPage } = props;
 	if (!enable) return <></>;
 
 	const nPages = Math.ceil(length / resultsPerPage);

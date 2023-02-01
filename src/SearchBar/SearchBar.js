@@ -27,7 +27,6 @@ export default function SearchBar(props) {
 				onChange={handleInputChange}
 				autoFocus
 			/>
-			<img className="search-icon" src="search.png" alt="search icon" />
 		</div>
 	);
 }
