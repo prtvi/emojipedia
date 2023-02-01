@@ -1,5 +1,5 @@
 import React from 'react';
-import './EmojiCard.css';
+import './Card.css';
 
 export default function EmojiCard(props) {
 	const { emoji, description, category, aliases, tags } = props;
@@ -10,7 +10,7 @@ export default function EmojiCard(props) {
 	};
 
 	return (
-		<li className="emoji-card" aliases={aliases} tags={tags}>
+		<li className="card" aliases={aliases} tags={tags}>
 			<img
 				src="copy.png"
 				alt="copy icon"
