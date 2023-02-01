@@ -25,6 +25,7 @@ export default function SearchBar(props) {
 				placeholder="Search any emoji"
 				value={search}
 				onChange={handleInputChange}
+				autoFocus
 			/>
 			<img className="search-icon" src="search.png" alt="search icon" />
 		</div>

@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 
 import SearchBar from './SearchBar/SearchBar';
-import EmojiCard from './EmojiCard/EmojiCard';
+import EmojiList from './EmojiList/EmojiList';
 import Pagination from './Pagination/Pagination';
 
 import {
@@ -40,20 +40,7 @@ export default function App() {
 			<div className="main">
 				<h1 className="h1">Em😃jipedia</h1>
 				<SearchBar setSearch={setSearch} setCurrPage={setCurrPage} />
-
-				<ul className="emoji-card-list">
-					{list.map((e, i) => (
-						<EmojiCard
-							key={i}
-							emoji={e.emoji}
-							description={e.description}
-							category={e.category}
-							aliases={e.aliases}
-							tags={e.tags}
-						/>
-					))}
-				</ul>
-
+				<EmojiList list={list} />
 				<Pagination
 					enable={enablePagination}
 					length={resultLength}
