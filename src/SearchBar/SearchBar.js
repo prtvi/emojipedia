@@ -1,10 +1,10 @@
 import React from 'react';
 import './SearchBar.css';
 
-const maxSearchLen = 25;
+import { maxSearchLen } from '../utils.js';
 
 export default function SearchBar(props) {
-	const { setSearch } = props;
+	const { setSearch, setCurrPage } = props;
 	const [search, updateSearch] = React.useState('');
 
 	const handleInputChange = function (e) {
@@ -13,6 +13,8 @@ export default function SearchBar(props) {
 
 		updateSearch(input);
 		setSearch(input);
+
+		if (input === '') setCurrPage(1);
 	};
 
 	return (

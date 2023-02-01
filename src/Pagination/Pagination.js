@@ -1,10 +1,12 @@
 import React from 'react';
 import './Pagination.css';
 
-export default function Pagination(props) {
-	const { length, currPage, setCurrPage } = props;
+import { resultsPerPage } from '../utils.js';
 
-	const resultsPerPage = 9;
+export default function Pagination(props) {
+	const { enable, length, currPage, setCurrPage } = props;
+	if (!enable) return <></>;
+
 	const nPages = Math.ceil(length / resultsPerPage);
 
 	const back = function () {
