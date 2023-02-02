@@ -1,7 +1,8 @@
 .card {
-	width: 90px;
-	height: 70px;
-	max-height: 90px;
+	width: 80px;
+	height: 60px;
+	max-width: 90px;
+	max-height: 70px;
 	overflow: auto;
 	margin: 5px;
 	border-radius: 5px;
@@ -22,6 +23,7 @@
 
 .card span {
 	font-size: 10px;
+	line-height: 12px;
 	display: block;
 	text-align: center;
 
@@ -46,10 +48,9 @@ span.category {
 	margin: 4px;
 	opacity: 0.5;
 	position: absolute;
-	left: 80%;
-	bottom: 72%;
+	left: 77%;
+	bottom: 68%;
 	display: none;
-	transition: src 1s ease-in-out;
 }
 
 /* display image on card hover */
@@ -65,11 +66,10 @@ span.category {
 
 @media screen and (min-width: 450px) {
 	.card {
-		width: 120px;
-	}
-
-	.card span {
-		font-size: 12px;
+		width: 85px;
+		height: 65px;
+		max-width: 100px;
+		max-height: 65px;
 	}
 
 	span.emoji {
@@ -80,7 +80,86 @@ span.category {
 	.card img {
 		width: 15px;
 		height: 15px;
-		left: 81%;
-		bottom: 68%;
+		left: 75%;
+		bottom: 64%;
+	}
+}
+
+@media screen and (min-width: 580px) {
+	.card {
+		width: 90px;
+		height: 75px;
+		max-width: 100px;
+		max-height: 80px;
+	}
+
+	.card span {
+		font-size: 11px;
+		line-height: 12px;
+	}
+
+	span.emoji {
+		font-size: 27px;
+		line-height: 27px;
+	}
+
+	.card img {
+		bottom: 66%;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.card {
+		width: 95px;
+		height: 75px;
+		max-width: 100px;
+		max-height: 80px;
+	}
+
+	span.emoji {
+		font-size: 28px;
+		line-height: 28px;
+	}
+
+	.card img {
+		bottom: 67%;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.card {
+		width: 100px;
+		height: 80px;
+		max-width: 110px;
+		max-height: 80px;
+	}
+
+	.card span {
+		font-size: 12px;
+		line-height: 13px;
+	}
+
+	span.emoji {
+		font-size: 32px;
+		line-height: 32px;
+	}
+}
+
+@media screen and (min-width: 1250px) {
+	.card {
+		width: 110px;
+		height: 90px;
+		max-width: 120px;
+		max-height: 100px;
+	}
+
+	.card span {
+		font-size: 13px;
+		line-height: 14px;
+	}
+
+	span.emoji {
+		font-size: 35px;
+		line-height: 35px;
 	}
 }

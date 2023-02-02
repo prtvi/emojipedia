@@ -5,9 +5,9 @@ import EMOJIS from './emojis.json';
 // constants
 const maxSearchLen = 25;
 const resultsPerPage = new Map([
-	[450, 15],
-	[580, 18],
-	[768, 18],
+	[450, 12],
+	[580, 25],
+	[768, 21],
 	[1024, 24],
 	[1250, 24],
 ]);
@@ -59,13 +59,13 @@ const useWindowDimensions = function () {
 const getResultsPerPage = function (width) {
 	if (width > 0 && width <= 450) return resultsPerPage.get(450);
 
-	if (width > 450 && width <= 580) return resultsPerPage.get(580);
+	if (width > 450 && width <= 580) return resultsPerPage.get(450);
 
-	if (width > 580 && width <= 768) return resultsPerPage.get(768);
+	if (width > 580 && width <= 768) return resultsPerPage.get(580);
 
-	if (width > 768 && width <= 1024) return resultsPerPage.get(1024);
+	if (width > 768 && width <= 1024) return resultsPerPage.get(768);
 
-	if (width > 1024 && width <= 1250) return resultsPerPage.get(1250);
+	if (width > 1024 && width <= 1250) return resultsPerPage.get(1024);
 
 	if (width > 1250) return resultsPerPage.get(1250);
 };

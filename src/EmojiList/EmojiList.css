@@ -1,5 +1,11 @@
 .emoji-card-list {
 	margin: 20px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	padding-top: 5px;
+	padding-bottom: 10px;
+	max-height: 360px;
+	overflow: auto;
 
 	/* responsive list, display-flex and flex-wrap */
 	display: flex;
@@ -7,4 +13,27 @@
 	justify-content: space-around;
 
 	border: var(--t);
+}
+
+@media screen and (min-width: 580px) {
+	.emoji-card-list {
+		max-height: 500px;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.emoji-card-list {
+		max-height: 430px;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.emoji-card-list {
+		margin-left: 50px;
+		margin-right: 50px;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
 }
