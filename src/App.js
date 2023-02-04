@@ -42,7 +42,7 @@ export default function App() {
 			<div className="bg-top"></div>
 			<div className="bg-bottom"></div>
 			<div className="main">
-				<h1 className="h1">Em😃jipedia</h1>
+				<h1 className="h1">Emojipedia</h1>
 				<SearchBar setSearch={setSearch} setCurrPage={setCurrPage} />
 				<EmojiList list={list} />
 				<Pagination

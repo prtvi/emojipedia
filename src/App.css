@@ -43,9 +43,25 @@
 	z-index: 1;
 }
 
+@media screen and (min-width: 580px) {
+	.h1 {
+		font-size: 32px;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.h1 {
+		font-size: 35px;
+	}
+}
+
 @media screen and (min-width: 1024px) {
 	.main {
 		width: 75%;
+	}
+
+	.h1 {
+		font-size: 40px;
 	}
 }
 
