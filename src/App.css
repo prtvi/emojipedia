@@ -1,6 +1,7 @@
 :root {
 	/* --t: 1px solid black; */
 	font-family: 'Poppins', sans-serif;
+	font-weight: 300;
 }
 
 * {
@@ -21,10 +22,9 @@
 
 .h1 {
 	font-size: 30px;
+	font-weight: 400;
 	text-align: center;
 	margin-top: 25px;
-
-	border: var(--t);
 }
 
 .main {

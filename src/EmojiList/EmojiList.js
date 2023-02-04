@@ -8,14 +8,7 @@ export default function EmojiList(props) {
 	return (
 		<ul className="emoji-card-list">
 			{list.map((e, i) => (
-				<Card
-					key={i}
-					emoji={e.emoji}
-					description={e.description}
-					category={e.category}
-					aliases={e.aliases}
-					tags={e.tags}
-				/>
+				<Card key={i} emoji={e.emoji} description={e.description} />
 			))}
 		</ul>
 	);

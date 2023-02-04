@@ -20,7 +20,7 @@ export default function App() {
 	const { width } = useWindowDimensions();
 	const resultsPerPage = getResultsPerPage(width);
 
-	const resultLimit = 50;
+	const resultLimit = 60;
 	const foundEmojis = fuse
 		.search(search)
 		.sort(sortDescending)

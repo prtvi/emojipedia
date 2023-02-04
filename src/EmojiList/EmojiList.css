@@ -11,8 +11,6 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
-
-	border: var(--t);
 }
 
 @media screen and (min-width: 580px) {

@@ -14,7 +14,7 @@ export default function SearchBar(props) {
 		updateSearch(input);
 		setSearch(input);
 
-		if (input === '') setCurrPage(1);
+		setCurrPage(1);
 	};
 
 	return (
@@ -25,7 +25,6 @@ export default function SearchBar(props) {
 				placeholder="Search any emoji"
 				value={search}
 				onChange={handleInputChange}
-				autoFocus
 			/>
 		</div>
 	);

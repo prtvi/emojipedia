@@ -4,8 +4,6 @@
 	justify-content: center;
 	margin: 10px;
 	margin-bottom: 20px;
-
-	border: var(--t);
 }
 
 .pagination-container span {
@@ -14,8 +12,6 @@
 	width: 110px;
 	text-align: center;
 	vertical-align: middle;
-
-	border: var(--t);
 }
 
 .pagination-container img {
@@ -26,8 +22,6 @@
 	opacity: 0.6;
 	cursor: pointer;
 	vertical-align: middle;
-
-	border: var(--t);
 }
 
 .pagination-container img:hover {

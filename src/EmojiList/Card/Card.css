@@ -12,8 +12,6 @@
 	flex-direction: column;
 	justify-content: space-evenly;
 	position: relative;
-
-	border: var(--t);
 }
 
 .card:hover {
@@ -26,19 +24,11 @@
 	line-height: 12px;
 	display: block;
 	text-align: center;
-
-	border: var(--t);
 }
 
 span.emoji {
 	font-size: 25px;
 	line-height: 25px;
-}
-
-span.category {
-	/* color: #696a6a; */
-	/* font-size: 8px; */
-	display: none;
 }
 
 /* copy icon */
