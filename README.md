@@ -9,4 +9,4 @@ The project uses the [fuzzy-search algorithm](https://fusejs.io/) to fetch resul
 
 ### Snapshot of the application
 
-<img src="out/1.png" alt="applicatino interface snapshot" width="400">
+<img src="out/1.png" alt="applicatino interface snapshot">
