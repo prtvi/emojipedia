@@ -12,3 +12,7 @@ The project uses the [fuzzy-search algorithm](https://fusejs.io/) to fetch resul
 ### Snapshot of the application
 
 <img src="out/1.png" alt="applicatino interface snapshot">
+
+## Other links
+
+Click [here](https://prtvi.github.io/allprojects.html) to check out my other projects
